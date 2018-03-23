@@ -1,3 +1,7 @@
 <template name="list">
-    
+    <ul>
+        {{#each tasks}}
+        <li><a href="#" target="_blank">{{name}}</a></li>
+        {{/each}}
+    </ul>
 </template>
