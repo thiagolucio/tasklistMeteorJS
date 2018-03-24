@@ -29,48 +29,31 @@
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <!-- <li class="active">
-              <a href="#">Link
-                <span class="sr-only">(current)</span>
-              </a>
-            </li> -->
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-user-circle-o fa-lg"></i> Account
-                  <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#">Action</a>
-                  </li>
-                  <li>
-                    <a href="#">Another action</a>
-                  </li>
-                  <li>
-                    <a href="#">Something else here</a>
-                  </li>
-                  <li role="separator" class="divider"></li>
-                  <li>
-                    <a href="#">Separated link</a>
-                  </li>
-                </ul>
-              </li>
+          <ul class="nav navbar-nav"></ul>
+            <ul class="nav navbar-nav navbar-right"> 
+              <!-- <i class="fa fa-user-circle-o fa-lg"></i> -->
+               {{> loginButtons}}
             </ul>
         </div>
       </div>
     </nav>
   </header>
   <div class="container">
-    <h1>MeteorJS Test mini App Single Page</h1>
+    <h1>MeteorJS Test App Single Page</h1>
+    {{> newTask}}
     <div class="panel panel-primary">
       <div class="panel-heading">
-        <h2 class="panel-title"> <i class="fa fa-list-alt"></i> List of Tasks</h2>
+        <h2 class="panel-title"> <i class="fa fa-list-alt"></i>   List of Tasks</h2>
       </div>
-      <div class="panel-body">
-         {{> list}}        
+      <div class="panel-body">         
+          {{#if currentUser}}
+            {{> list}}             
+          {{else}} 
+            <div class="alert alert-dismissible alert-danger">
+              <strong>
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Please, Create Account and Login first to create Tasks.</strong>
+            </div>                       
+          {{/if}}
       </div>
     </div>
     </div>

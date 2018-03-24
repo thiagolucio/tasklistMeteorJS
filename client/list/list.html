@@ -1,10 +1,14 @@
 <template name="list">
-    <ul class="list-group">
-        {{#each tasks}}
-        <li class="list-group-item">
-            <span class="badge badge-danger"><i class="fa fa-trash-o fa-2x"></i></span>
-            {{name}} - <div class="label label-primary">{{data}}</div>
-        </li>
-        {{/each}}
-    </ul>
+    <div class="row">
+        <ul class="list-group">
+            {{#each tasks}}
+            <li class="list-group-item animated flipInX">
+                    <button type="button" class="btn btn-danger btn-xs btn-circle">
+                        <i class="fa fa-trash-o fa-2x"></i>
+                    </button>
+                <i class="fa fa-calendar" aria-hidden="true"></i>  -  <div class="label label-primary">{{formatDate}}</div>  -  {{name}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </template>

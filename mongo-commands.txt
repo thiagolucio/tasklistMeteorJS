@@ -5,15 +5,38 @@ db.tasks.insert({name: "First Task"});
 db.tasks.insert({name: "Fith Task"});
 
 
-If need to inser the date of some task:
-
+If need to insert the date of some task:
 db.tasks.insert({name : "First Task", data : new Date()});
 
+If need take a look in all registers in MongoDB:
+db.Tasks.find({});
 
-Adding Some Solutions:
+Remove autopublish from block edit client side console:
+meteor remove autopublish
 
+...if need reinstall: 
+meteor add mdg:autopublish
+
+
+Adding Some Plugins:
+
+-> For Layout:
 meteor add mrt: bootstrap-3
-meteor add alexwine:bootstrap-4
+meteor add alexwine:bootstrap-4 - (remove because cause conflicts)
+
+-> For Dates:
+meteor add momentjs:moment - (for dates layout)
+
+-> Choice from Login:
+meteor add stylus - (for login plugin dependency)
+meteor add accounts-base - (plugin for login accounts)
+meteor add accounts-password - (plugin for login accounts password)
+meteor add ian:accounts-ui-bootstrap-3 - (design from submenu login)
+
+
+Create Cloud App on Meteor.com:
+
+
 
 
 
@@ -28,3 +51,6 @@ First I need to stop MongoDB Service because meteor reset erases everything in y
 I wanna install two packages from bootstrap because the version 4 is more amazing and modern. But because that I have a lot of visual conflicts. And because that I remove Boostrap 4. 
 The decision is because the version 4 package used a old version of Alpha Bootstrap. Because my short time to show this job I decide used the old version because in meteor packages
 they have the last version of bootstrap-3, stable and secure.  With more time and reserch
+
+Observe some bugs using plugins. In plugins to make account controler and style. Be necessary install first the plugin stylus and after that install the others
+to get the correct engine on application. 
