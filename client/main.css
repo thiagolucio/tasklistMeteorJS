@@ -1,4 +1,6 @@
 .font12 {font-size: 12px;}
+.padding16 {padding: 16px;}
+.line-height60 {line-height: 60px;}
 
 ul.list-group {
   list-style: none;
@@ -33,15 +35,9 @@ ul.list-group {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
-.padding16 {
-  padding: 16px;
-}
-.line-height60 {line-height: 60px;}
 /*Animations*/
 
 /*global timestamp*/
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;

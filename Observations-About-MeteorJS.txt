@@ -1,0 +1,51 @@
+Mongo DB insert commands:
+
+db.tasks.insert({name: "First Task"});
+...
+db.tasks.insert({name: "Fith Task"});
+
+
+If need to insert the date of some task:
+db.tasks.insert({name : "First Task", data : new Date()});
+
+If need take a look in all registers in MongoDB:
+db.Tasks.find({});
+
+Remove autopublish from block edit client-side console:
+meteor remove autopublish
+
+...if need reinstall: 
+meteor add mdg:autopublish
+
+
+Adding Some Plugins:
+
+-> For Layout:
+meteor add mrt: bootstrap-3
+meteor add alexwine:bootstrap-4 - (remove because of cause conflicts)
+
+-> For Dates:
+meteor add momentjs:moment - (for dates layout)
+
+-> Choice from Login:
+meteor add stylus - (for login plugin dependency)
+meteor add accounts-base - (plugin for login accounts)
+meteor add accounts-password - (plugin for login accounts password)
+meteor add ian:accounts-ui-bootstrap-3 - (design from submenu login)
+
+
+Some observations:
+
+I don't upload Application from Meteor Site because now that is necessary pay for that (Galaxy).
+
+MongoDB Base doesn't work with NFS Partition - I observe that and see this problem because I use Linux (Debian) on my personal computer. So my second partition is in NFS format. 
+To solve this problem, I put the repository in my first partition Ext4 and I deleted  ".meteor/local/db/mongod.lock" on my project. 
+
+First I need to stop MongoDB Service because meteor reset erases everything in your local database when this service is Up. 
+
+I wanna install two packages from bootstrap because the version 4 is more amazing and modern. But because that I have a lot of visual conflicts. And because that I remove Bootstrap 4. 
+The decision is because the version 4 package used an old version of Alpha Bootstrap. Because my short time to show this job I decide used the old version because in meteor packages
+they have the last version of bootstrap-3, stable and secure.  With more time and research
+
+Observe some bugs using plugins. In plugins to make account controller and style. Be necessary install first the plugin stylus and after that install the others
+to get the correct engine an application. 
