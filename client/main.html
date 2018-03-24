@@ -1,13 +1,79 @@
 <head>
-  <title>tasklistMeteor</title>
+  <title>tasklistMeteor</title> 
+  <link rel="stylesheet" href="/assets/css/bootstrap-personal-theme.css">
 </head>
-
 <body>
-  <h1>MeteorJS Test mini App Single Page</h1>
-  {{> list}}
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">       
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <svg width="auto" height="40" viewBox="1 45 612 124" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+              <!-- Art from logo -->
+              <g fill-rule="evenodd"><g fill="#DF4F4F">
+                <path d="M303.758.215l107.286 113.642s3.656 2.578 6.45-.43c2.796-3.007.646-6.014.646-6.014L303.758.215zM337.728 10.956l81.702 88.078s3.655 2.578 6.45-.43c2.795-3.007.645-6.014.645-6.014l-88.797-81.634zM313.863 33.942l81.701 88.079s3.655 2.578 6.45-.43c2.795-3.008.645-6.015.645-6.015l-88.796-81.634zM366.446 20.194l57.08 61.535s2.553 1.8 4.506-.3c1.953-2.102.45-4.203.45-4.203l-62.036-57.032zM321.725 60.58l57.08 61.536s2.554 1.8 4.506-.3c1.953-2.102.451-4.203.451-4.203l-62.037-57.032zM395.78 33.513l25.87 27.974s1.263.844 2.229-.14c.966-.985.223-1.97.223-1.97l-28.323-25.864zM336.008 88.938l25.87 27.974s1.264.844 2.23-.14c.966-.985.223-1.97.223-1.97l-28.323-25.864z"/>
+              </g>
+                <!-- Words from logo -->
+                <g fill="#FFFFFF">
+                  <path d="M446.171 46.23v75.433h17.067V97.331h12.8l16.457 24.332H512l-18.286-26.157s16.238-6.418 16.238-23.826c0-24.576-22.333-25.448-22.333-25.448l-41.448-.002zm17.067 14.602v21.9h21.943s8.387-.002 8.387-10.952c0-11.365-10.216-10.948-10.216-10.948h-20.114zM257.219 46.232v75.431h57.295v-14.6h-40.228V91.249h34.743v-14.6h-34.743V60.82h40.228V46.232H257.22zM174.324 46.232v14.6h22.552v60.831h17.067V60.832h22.552v-14.6h-62.171zM96.305 46.232v75.431H153.6v-14.6h-40.229V91.249h34.743v-14.6h-34.743V60.82H153.6V46.232H96.305zM0 46.23v75.435l17.055-.001V74.213l20.724 30.416 20.735-30.416v47.452h17.067V46.23H58.514L37.78 77.254 17.055 46.23H0z"/>
+                </g>
+              </g>
+            </svg>                       
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active">
+              <a href="#">Link
+                <span class="sr-only">(current)</span>
+              </a>
+            </li> -->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-user-circle-o fa-lg"></i> Account
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="#">Action</a>
+                  </li>
+                  <li>
+                    <a href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a href="#">Something else here</a>
+                  </li>
+                  <li role="separator" class="divider"></li>
+                  <li>
+                    <a href="#">Separated link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <h1>MeteorJS Test mini App Single Page</h1>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2 class="panel-title"> <i class="fa fa-list-alt"></i> List of Tasks</h2>
+      </div>
+      <div class="panel-body">
+         {{> list}}        
+      </div>
+    </div>
+    </div>
+
 
 </body>
-
-
-
-

@@ -1,0 +1,30 @@
+Mongo DB insert commands:
+
+db.tasks.insert({name: "First Task"});
+...
+db.tasks.insert({name: "Fith Task"});
+
+
+If need to inser the date of some task:
+
+db.tasks.insert({name : "First Task", data : new Date()});
+
+
+Adding Some Solutions:
+
+meteor add mrt: bootstrap-3
+meteor add alexwine:bootstrap-4
+
+
+
+
+Some observations:
+
+MongoDB Base doesn't work with NFS Partition - I observe that and see this problem because I use Linux (Debian) in my Workstation. So my second partition is in NFS format. 
+To solve this problem, I put the repository in my first partition Ext4 and I deleted  ".meteor/local/db/mongod.lock" on my project. 
+
+First I need to stop MongoDB Service because meteor reset erases everything in your local database when this service is Up. 
+
+I wanna install two packages from bootstrap because the version 4 is more amazing and modern. But because that I have a lot of visual conflicts. And because that I remove Boostrap 4. 
+The decision is because the version 4 package used a old version of Alpha Bootstrap. Because my short time to show this job I decide used the old version because in meteor packages
+they have the last version of bootstrap-3, stable and secure.  With more time and reserch

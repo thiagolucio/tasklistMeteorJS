@@ -1,2 +1,32 @@
-/* CSS declarations go here */
-body {color: black}
+ul.list-group {
+  list-style: none;
+  font-size: 18px;
+}
+
+.list-group-item {
+  line-height: 36px;
+}
+
+.panel-title {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.badge-danger {
+  background: #E74C3C;
+  border-radius: 45%;
+  border: 2px solid #EEEEEE;
+  padding: auto;
+  margin: 4px;
+}
+
+.badge-danger:hover {
+  cursor: pointer;
+  background: rgb(177, 55, 42);
+  border-radius: 45%;
+  border: 1px solid #EEEEEE;
+  padding: auto;
+  margin: 4px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
